@@ -146,4 +146,14 @@ $ npm run build
 
 This time when process is finish if we go to the `/doc` directory we can see our recently created static content :-)
 
-So time to 
+So time to publish in github we use:
+
+```
+$ git add --all 
+$ git commit -m 'trying to publish'
+$ git push
+```
+
+And if we navigate to `https://joolfe.github.io/gatsby-for-docs/` we can see that our page is there!! 🎉🎊
+
+![publish first real content](../doc-img/publish-content.png)
