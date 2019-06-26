@@ -15,7 +15,6 @@ After a ligth reading in the [documentation](https://www.gatsbyjs.org/docs/how-g
 
 So just go to the file `config.js` and update the property with value `gatsby-for-docs`, build again, publish and done 💪.
 
-
 # Images
 
 # Index page
