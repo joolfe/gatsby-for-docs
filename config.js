@@ -1,30 +1,26 @@
 const config = {
 	"gatsby": {
 		"pathPrefix": "/gatsby-for-docs/",
-		"siteUrl": "https://learn.hasura.io",
+		"siteUrl": "https://joolfe.github.io",
 		"gaTrackingId": null
 	},
 	"header": {
 		"logo": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.svg",
-		"title": "Gatsby Gitbook Boilerplate",
-		"githubUrl": "https://github.com/hasura/gatsby-gitbook-boilerplate",
+		"title": "Gatsby gitbook tutorial",
+		"githubUrl": "https://github.com/joolfe/gatsby-for-docs",
 		"helpUrl": "",
 		"tweetText": "",
-		"links": [
-			{ "text": "", "link": ""}
-		],
+		"links": [{ "text": "", "link": ""}],
 	},
 	"sidebar": {
 		"forcedNavOrder": [],
-		"links": [
-			{ "text": "", "link": ""},
-		]
+		"links": [{ "text": "", "link": ""}]
 	},
 	"siteMetadata": {
-		"title": "Gatsby Gitbook Boilerplate | Hasura",
-		"description": "Documentation built with mdx. Powering learn.hasura.io ",
+		"title": "Gatsby gitbook tutorial",
+		"description": "Step by step tutorial about how to use gatsby to create a gitbook doc.",
 		"ogImage": null,
-		"docsLocation": "https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content",
+		"docsLocation": "https://github.com/joolfe/gatsby-for-docs/tree/master/content",
 		"favicon": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg"
 	},
 };

@@ -5,3 +5,12 @@ metaDescription: "Steps for set up the environment for use gatsby"
 ---
 
 # Color theme
+
+
+# Logo
+
+
+# Favicon
+
+
+# Image borders

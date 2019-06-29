@@ -23,11 +23,59 @@ Other problem that we can see at a glance is that images are not being loaded in
 
 If we test in local in the develop server we can see that images are not loaded 😮, so should be the way that we are referencing images or where images are located.
 
-Right now we have images in a folder called `/doc-img` in the root and we are referencing images from markdown using this code`![image not load](../doc-img/no-image.png)`.
+Right now we have images in a folder called `/doc-img` in root project level and we are referencing images from markdown using this code `![image not load](../doc-img/no-image.png)`.
+
+I have found nothing related with images in the  [gatsby-gitbook-starter](https://www.gatsbyjs.org/starters/hasura/gatsby-gitbook-starter/) git repo or docs but to make builder understand that should take the images i think we should put inside the `/content` folder, here is where we are putting all our static content 😚. 
+
+So we move our images to `/content/doc-img/` folder and in our markdown we are going to reference images as `![image not load](./doc-img/no-image.png)` (we just remove a point 😉). 
+
+Now we should test in local so:
+
+```
+$ gatsby develop
+```
+
+and when we go to `http://http://localhost:8000` we can confirm that images are being loaded, awesome!!
+
+Now just build, push and done 👌!
 
 # Complete the metainformation
 
-Lot of info to be filled related with our page.
+If we open `config.js` file we can see that there are lot of parameters that should be configured like
+`title` or `githubUrl`, so this step is very easy just complete the info related with our site, as result we will have this:
+
+```javascript
+const config = {
+	"gatsby": {
+		"pathPrefix": "/gatsby-for-docs/",
+		"siteUrl": "https://joolfe.github.io",
+		"gaTrackingId": null
+	},
+	"header": {
+		"logo": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.svg",
+		"title": "Gatsby gitbook tutorial",
+		"githubUrl": "https://github.com/joolfe/gatsby-for-docs",
+		"helpUrl": "",
+		"tweetText": "",
+		"links": [{ "text": "", "link": ""}],
+	},
+	"sidebar": {
+		"forcedNavOrder": [],
+		"links": [{ "text": "", "link": ""}]
+	},
+	"siteMetadata": {
+		"title": "Gatsby gitbook tutorial",
+		"description": "Step by step tutorial about how to use gatsby to create a gitbook doc.",
+		"ogImage": null,
+		"docsLocation": "https://github.com/joolfe/gatsby-for-docs/tree/master/content",
+		"favicon": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg"
+	},
+};
+
+module.exports = config;
+```
+
+👉 We will change the logo url soon...
 
 # Ups build files are collisioning!
 
@@ -37,9 +85,15 @@ Remove doc folder content before build.
 
 The url of our page are not pretty.
 
+# Right index 
+
+Only first level is showed not sure if we should change for put second level also??
+
 # Index page
 
 We are not filling this mdx page 
+
+
 
 
 
