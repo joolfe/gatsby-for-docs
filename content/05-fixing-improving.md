@@ -77,9 +77,23 @@ module.exports = config;
 
 👉 We will change the logo url soon...
 
-# Ups build files are collisioning!
+# Build command is failling...
 
-Remove doc folder content before build.
+We have add a `mv` command in build script but after a couple of executions we get this error:
+
+```
+mv: rename public/static to docs/static: Directory not empty
+```
+
+An easy one... we are moving things without remove the previous files so we get this error 😢, to solve this we just need to add a `rm` command before move, so in the `package.json`script section we change for this:
+
+``` json
+  "scripts": {
+    "build": "gatsby build --prefix-paths; rm -rf docs/*; mv public/* docs/"
+  },
+```
+
+Thats all folks 🐷!
 
 # Urls 
 
