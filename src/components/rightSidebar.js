@@ -86,7 +86,12 @@ const SidebarLayout = ({ location }) => (
         const navItems = allMdx.edges.map((item, index) => {
           let innerItems;
           if(item !== undefined) {
-            if ((item.node.fields.slug === location.pathname) || (config.gatsby.pathPrefix + item.node.fields.slug) === location.pathname) {
+            console.log(item);
+            console.log(item.node.fields.slug);
+            console.log(location.pathname);
+            console.log(config.gatsby.pathPrefix + item.node.fields.slug);
+            if ((item.node.fields.slug === location.pathname) || (item.node.fields.slug+'/' === location.pathname) || (config.gatsby.pathPrefix + item.node.fields.slug) === location.pathname) {
+              console.log("SIP");
               if (item.node.tableOfContents.items) {
                 innerItems = item.node.tableOfContents.items.map((innerItem, index) => {
                   return (
@@ -120,7 +125,7 @@ const SidebarLayout = ({ location }) => (
       } else {
         return (
           <Sidebar>
-            <ul></ul>
+            <ul>{finalNavItems}</ul>
           </Sidebar>
         );
       }

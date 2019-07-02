@@ -1,6 +1,6 @@
 const config = {
 	"gatsby": {
-		"pathPrefix": "/gatsby-for-docs/",
+		"pathPrefix": "/gatsby-for-docs",
 		"siteUrl": "https://joolfe.github.io",
 		"gaTrackingId": null
 	},
