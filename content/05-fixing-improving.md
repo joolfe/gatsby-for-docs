@@ -95,18 +95,84 @@ An easy one... we are moving things without remove the previous files so we get 
 
 Thats all folks 🐷!
 
-# Urls 
+# Right nav bar erratic behaviour 
 
-The url of our page are not pretty.
+While testing in local I have seen that sometimes the right nav bar is not showed 😧 and testing in our pubished github pages confirm that there is a problem because is never showed 😱.
 
-# Right index 
+After do some test in local i have found a pattern, when the url finish with '/' the navbar is not showed, if we click in any link the last alsh desapear and then the navbar apper... is time to review the code. 
 
-Only first level is showed not sure if we should change for put second level also??
+To see where the navbar is printed i just search for the literal `CONTENTS` (the title of the navbar) inside the `/src` folder and we get is in `src/components/rightSidebar.js` file (so foreseeable 😌).
 
-# Index page
+If we see the code there is a `if else` for show or not the navbar:
 
-We are not filling this mdx page 
+```
+if (finalNavItems && finalNavItems.length) {
+        return (
+          <Sidebar>
+            <ul className={'rightSideBarUL'}>
+              <div className={'rightSideTitle'}>CONTENTS</div>
+              {finalNavItems}
+            </ul>
+          </Sidebar>
+        );
+      } else {
+        return (
+          <Sidebar>
+            <ul>{finalNavItems}</ul>
+          </Sidebar>
+        );
+      }
+```
 
+Basically depend of the definition of variable `finalNavItems` so looking for the definition code we foud just before the last lines and the critical point is this `if` statement:
+
+```
+if ((item.node.fields.slug === location.pathname) || (config.gatsby.pathPrefix + item.node.fields.slug) === location.pathname) {
+```
+
+Bascially is only setting a value to the variable if the actual `location.pathname` (is the page location) match one of the conditions, so to help us investigate i put this logs just before the `if` statement: 
+
+```
+console.log("Location: "+location.pathname);
+console.log("Slug: "+item.node.fields.slug); 
+console.log("Prefix + slug: "+config.gatsby.pathPrefix + item.node.fields.slug);
+```
+
+While testing in local using `$ gatsby develop` we see in the console this traces:
+
+```
+> Location: /02-setup-environment/
+> Slug: 02-setup-environment 
+> Prefix + slug: /gatsby-for-docs//02-setup-environment
+```
+😮 here we have the problem, in local when the url finish in `/` this is not cover by the conditions, but is easy to fix, we just add a new condition to the if like this:
+
+```
+(item.node.fields.slug+'/' === location.pathname)
+```
+
+One problem solved!, in the other side the problem in the published web is also obvious, if we see the last trace in the console there are an aditional slash in the url `/gatsby-for-docs//02-setup-environment` , this part of the path comes form `config.gatsby.pathPrefix` Ups 😗, thats something that we have setup in the `config.js` file, we have put:
+
+```
+	"gatsby": {
+		"pathPrefix": "/gatsby-for-docs/",
+		"siteUrl": "https://joolfe.github.io",
+		"gaTrackingId": null
+	},
+```
+
+so just replacing with this `/gatsby-for-docs` weare done 😎.
+
+> Don't forget to remove the `console.log` code before publish again 😉.
+
+
+# Google analytics 
+
+One of the configuration value that we have left empty is the `"gaTrackingId"`, that is for Google Analitycs and track the visit in our tutorial webpage. 
+
+To get this `id` you just need to be register in google go to [analytics.google.com](https://analytics.google.com/analytics/web) and create a new account for track your web., it's free, well indeed they are getting advantage of the data so not free at all.
+
+> There are lot of tutorials about this so we don't spent more time in this sorry 🙏.
 
 
 

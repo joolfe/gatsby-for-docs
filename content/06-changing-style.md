@@ -13,4 +13,11 @@ metaDescription: "Steps for set up the environment for use gatsby"
 # Favicon
 
 
+# Font size and headers
+
+Put small the headers...
+
 # Image borders
+
+
+

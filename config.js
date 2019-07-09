@@ -1,8 +1,8 @@
 const config = {
 	"gatsby": {
-		"pathPrefix": "/gatsby-for-docs",
+		"pathPrefix": "/gatsby-for-docs/",
 		"siteUrl": "https://joolfe.github.io",
-		"gaTrackingId": null
+		"gaTrackingId": "UA-143514465-1"
 	},
 	"header": {
 		"logo": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.svg",

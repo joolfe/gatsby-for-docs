@@ -3,8 +3,9 @@
 <url> <loc>https://joolfe.github.io/gatsby-for-docs/01-introduction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://joolfe.github.io/gatsby-for-docs/02-setup-environment</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://joolfe.github.io/gatsby-for-docs/03-new-project</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://joolfe.github.io/gatsby-for-docs/05-fixing-improving</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://joolfe.github.io/gatsby-for-docs/06-changing-style</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://joolfe.github.io/gatsby-for-docs/04-publishing-content</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://joolfe.github.io/gatsby-for-docs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://joolfe.github.io/gatsby-for-docs/05-fixing-improving</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://joolfe.github.io/gatsby-for-docs/07-index-page</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://joolfe.github.io/gatsby-for-docs/06-changing-style</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
