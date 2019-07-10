@@ -152,6 +152,7 @@ const SidebarLayout = ({ location }) => (
           let isActive = false;
           if(location && (location.pathname === node.fields.slug || location.pathname === (config.gatsby.pathPrefix + node.fields.slug)) ) {
             isActive = true;
+          
           }
 
           return (
