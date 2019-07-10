@@ -30,14 +30,11 @@ module.exports = {
       options: {
         gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              maxWidth: 1035,
-              sizeByPixelDensity: true
+              destinationDir: 'doc-img',
+              ignoreFileExtensions: []
             }
-          },
-          {
-            resolve: 'gatsby-remark-copy-linked-files'
           }
         ],
         extensions: [".mdx", ".md"]
