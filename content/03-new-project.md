@@ -58,7 +58,7 @@ Let us check in our browser the url `http://localhost:8000/`
 
 That's what i have found, Great! 🚀
 
-![First gatsby run](./doc-img/first-run.png)
+![First gatsby run](doc-img/first-run.png)
 
 # Setup Git repo
 
@@ -66,7 +66,7 @@ We have our new project running and we donñt want to lose our work... I know, I
 
 We already has an account on github offrcourse so let us login into github and create a new repo like showed in this image
 
-![Create repo on github](./doc-img/create-repo.png)
+![Create repo on github](doc-img/create-repo.png)
 
 After click the `Create Repository` button we will see the next instructions in the screen that is showed
 

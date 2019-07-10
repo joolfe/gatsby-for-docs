@@ -17,11 +17,11 @@ Before set up github need to create some folders and file sin our project, so:
 
 Ok we are now ready to activate github pages ✅, go to our recently created repo and navigate to "Settings" tab, in this page search for the "GitHub Pages" section and choose the /docs folder option in the combo.
 
-![Activate github pages](./doc-img/activate-git-pages.png)
+![Activate github pages](doc-img/activate-git-pages.png)
 
 Without do anything else we have publish a static page, just check in the url that appear in the blue panel, in our case [https://joolfe.github.io/gatsby-for-docs/](https://joolfe.github.io/gatsby-for-docs/) show this
 
-![First publication in github](./doc-img/first-publish.png)
+![First publication in github](doc-img/first-publish.png)
 
 We are online!! 🎉🎉🎉
 
@@ -77,7 +77,7 @@ $ gatsby develop
 ```
  But this time when we go to `http://localhost:8000/` we see an error screen
 
- ![first errors](./doc-img/first-errors.png)
+ ![first errors](doc-img/first-errors.png)
 
 Oh no 😓!!
 
@@ -108,7 +108,7 @@ $ gatsby develop
 ```
 It's working now!  👏👏👏 
 
-![Run with content](./doc-img/run-with.content.png)
+![Run with content](doc-img/run-with.content.png)
 
 ## Now publish our content
 
@@ -156,4 +156,4 @@ $ git push
 
 And if we navigate to `https://joolfe.github.io/gatsby-for-docs/` we can see that our page is there!! 🎉🎊
 
-![publish first real content](./doc-img/publish-content.png)
+![publish first real content](doc-img/publish-content.png)
