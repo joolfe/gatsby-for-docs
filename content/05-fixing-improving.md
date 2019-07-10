@@ -170,9 +170,9 @@ so just replacing with this `/gatsby-for-docs` weare done 😎.
 
 One of the configuration value that we have left empty is the `"gaTrackingId"`, that is for Google Analitycs and track the visit in our tutorial webpage. 
 
-To get this `id` you just need to be register in google go to [analytics.google.com](https://analytics.google.com/analytics/web) and create a new account for track your web., it's free, well indeed they are getting advantage of the data so not free at all.
+To get this `id` you just need to be register in google, go to [analytics.google.com](https://analytics.google.com/analytics/web) and create a new account for track your web. Well is better descirbe [here](https://support.google.com/analytics/answer/1009694?hl=en) by Google 😬.
 
-> There are lot of tutorials about this so we don't spent more time in this sorry 🙏.
+We put this value in our `config.js` file and done!
 
 
 

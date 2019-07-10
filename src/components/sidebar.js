@@ -10,8 +10,6 @@ const forcedNavOrder = config.sidebar.forcedNavOrder;
 
 const Sidebar = styled('aside')`
   width: 100%;
-  /* background-color: rgb(245, 247, 249); */
-  /* border-right: 1px solid #ede7f3; */
   height: 100vh;
   overflow: auto;
   position: fixed;
@@ -21,22 +19,11 @@ const Sidebar = styled('aside')`
   position: sticky;
   top: 0;
   padding-right: 0;
-  background-color: #372476;
-  /* Safari 4-5, Chrome 1-9 */
-  background: linear-gradient(#372476, #3b173b);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#372476), to(#3b173b));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #372476, #3b173b);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #372476, #3b173b);
-  /* IE 10 */
-  background: -ms-linear-gradient(top, #372476, #3b173b);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #372476, #3b173b);
+  background-color: #EEE;
   @media only screen and (max-width: 767px) {
     padding-left: 0px;
-    background-color: #372476;
-    background: #372476;
+    background-color: #F4EBEB;
+    background: #F4EBEB;
   }
   @media (min-width: 767px) and (max-width:1023px)
   {
@@ -75,7 +62,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
   list-style: none;
 
   a {
-    color: #fff;
+    color: #3b454e;
     text-decoration: none;
     font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
     padding: 0.45rem 0 0.45rem ${props => 2 + (props.level || 0) * 1}rem;
@@ -83,15 +70,14 @@ const ListItem = styled(({ className, active, level, ...props }) => {
     position: relative;
 
     &:hover {
-      background-color: #542683;
+      background-color: #DADAD9;
     }
 
     ${props =>
       props.active &&
       `
-      color: #fff;
-      background-color: #473485;
-    `} // external link icon
+      color: #FF4040;
+    `} 
     svg {
       float: right;
       margin-right: 1rem;
