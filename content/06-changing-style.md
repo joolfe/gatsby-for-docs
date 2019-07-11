@@ -104,21 +104,71 @@ Pretty isn't it? But wait! when we put the cursor on top of the menu options the
 
 How much beauty 😢.
 
-# The strange character in header
+# Rest of the colors...
+
+We have change most visible color elements but there are other elements that still has the purple color,
+- Links `<a>` (css in `src/template/docs.js`)
+- Links in right menu on hover (css in `src/comonents/rightSidebar.js`)
+- Line near to the page title (css in `src/components/styles.css`)
+- Navigation buttons in bottom of the page (css in `src/components/styles.css`)
+
+I'm not going to repeat the steps here, we just look for css classes using devtools and change the value in the static css file or dinamic classes inside components code.
+
+All this color will be replaced by our wonderfull primary color `#FF4040`.
+
+# Image borders
+
+Some images in our tutorial don't looks pretty well, like for exmaple this one:
+
+![images no border](doc-img/images-no-border.png)
+
+If you look carefully the github form is a picture but seems part of our text 😩, to avois this effect we are going to put a border around images, and for maintain the style coherence we are going to use the same border that already has our code blocks.
+
+We just do right click in a code block and inspect the css, the trick to do the border is very elegant, just use:
+
+```
+background-color: #f5f7f9;
+padding: 9.5px;
+border-radius: 4px;
+```
+
+So we can add into the `src/componenets/styles.css` file a new css rule to make all images that are inside the main body (we don't want to put a border to the logo for example 😗) have the border, this code should work:
+
+```{css}
+.mainWrapper img {
+    background-color: #f5f7f9;
+    padding: 9.5px;
+    border-radius: 4px;    
+}
+```
+If we refresh in local we will see this:
+
+![images with borders](doc-img/images-with-border.png)
+
+Awesome! 💪
+
+
+# Quote panels
 
 
 
 # Logo
 
-
 # Favicon
+
+# The strange character in header
+
+
+
+
+
 
 
 # Font size and headers
 
 Put small the headers...
 
-# Image borders
+
 
 
 # Menu size...

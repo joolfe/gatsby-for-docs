@@ -3,6 +3,12 @@ body {
   font-family: 'Roboto';
 }
 
+.mainWrapper img {
+  background-color: #f5f7f9;
+  padding: 9.5px;
+  border-radius: 4px;    
+}
+
 .video-responsive {
   position: relative;
   padding-bottom: 56.2%;
@@ -45,7 +51,7 @@ body {
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-  background-color: #542683;
+  background-color: #FF4040;
 }
 
 .headerWrapper {
@@ -264,7 +270,7 @@ pre {
   font-size: 32px;
   line-height: 1.5;
   font-weight: 500;
-  border-left: 2px solid rgb(116, 76, 188);
+  border-left: 4px solid #FF4040;
   padding: 0 16px;
   flex: 1;
   margin-top: 0;
@@ -404,13 +410,13 @@ pre {
 }
 
 .nextBtn:hover, .previousBtn:hover {
-  color: rgb(116, 76, 188);
+  color: #FF4040;
   text-decoration: none;
-  border: 1px solid rgb(116, 76, 188);
+  border: 1px solid #FF4040;
 }
 
 .nextBtn:hover .rightArrow, .previousBtn:hover .leftArrow {
-  color: rgb(116, 76, 188);
+  color: #FF4040;
 }
 
 /* tables.css */
