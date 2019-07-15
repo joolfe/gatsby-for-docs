@@ -5,7 +5,7 @@ const config = {
 		"gaTrackingId": "UA-143514465-1"
 	},
 	"header": {
-		"logo": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.svg",
+		"logo": "",
 		"title": "Gatsby gitbook tutorial",
 		"githubUrl": "https://github.com/joolfe/gatsby-for-docs",
 		"helpUrl": "",

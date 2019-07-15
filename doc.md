@@ -6,6 +6,6 @@ TODO
 - Review all the language using some.
 - Put in the reamde file a text about wht is the repo
 - Create a little md about how to dpeloy and do thing for myself...
-
+- NO funciona la navegacion de la derecha no?
 
 

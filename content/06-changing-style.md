@@ -150,26 +150,115 @@ Awesome! 💪
 
 # Quote panels
 
+Other piece that we can improve are the Qoute panel, I mean elements that appear when we use in markdown a quote like this:
+
+```{markdown}
+> Hi! this is a quote :-)
+```
+
+In our tutorial has this style
+
+![Quote before change](doc-img/quote-before-change.png)
+
+Too much discreet for my taste, so let us put some of color to this panel, I think we can use our blue color as inspiration `#5BC3EB`, also add some background and fix the spacing of the component.
+
+So we add this code into `src/componenets/styles.css` file:
+
+```{css}
+blockquote {
+  padding: 20px;
+  font-size: 14.5px;
+  border-left: 5px solid #5BC3EB;
+  background-color: #f5f7f9;
+  color: #6b747b;
+}
+
+blockquote p:first-child{
+    margin-top: 0px;
+}
+```
+
+If we test in local we can see this
+
+![img](doc-img/quote-after-changes.png)
 
 
 # Logo
 
-# Favicon
+We are going to add our custom logo to the web 😊, because we are "experimenting" with **gatsby** I have think in merge the concept of experiment and gatsby, for experiment i have think somehting like a test tube and for gatsby just the logo, so the result is this:
+
+![new logo](doc-img/new-logo-2.png)
+
+I know, I know... I'm not a designer 😝 so this should work...
+
+If you remember while seting up the meta we see a **logo** property inside `config.js` file, concretely in header section that looks like:
+
+```
+	"header": {
+		"logo": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.sv",
+		"title": "Gatsby gitbook tutorial",
+		"githubUrl": "https://github.com/joolfe/gatsby-for-docs",
+		"helpUrl": "",
+		"tweetText": "",
+		"links": [{ "text": "", "link": ""}],
+	},
+```
+
+Ummm... but this logo is an outside resource... we want to use a logo in **svg** format and the resource will be inside our files 😕.
+
+Let's have a look to the code that print the logo (remeber using DevTool...), we get this:
+
+```{html}
+<a aria-current="page" class="navbar-brand navBarBrand" href="/gatsby-for-docs/">
+    <img class="img-responsive" src="https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.svg" alt="logo">
+    Gatsby gitbook tutorial
+</a>
+```
+
+So we search in our files for the css class `navbar-brand navBarBrand`, we easily find that is inside file `src/components/Header.js`, ok makes sense jejeje.
+
+The code that print the logo is this one:
+
+```
+    <Link to="/" className={'navbar-brand navBarBrand'}>
+    {logo !== '' ?
+        (<img className={'img-responsive'} src={logo} alt={'logo'} />)
+        :
+        (<img className={'img-responsive'} src={logoImg} alt={'logo'} />)
+    }
+    {headerTitle}
+    </Link>
+```
+
+Is very easy to understand, if in the config we have the **logo** parameter filled then this value is used, if not then use `{logoImg}`, just in same file a little early we found the definition of this variable `const logoImg = require('./images/logo.svg');`, so bascally is using a static resource inside folder `src/images`, that's greate because is exactly what we need 😏.
+
+So to use our logo we just copy our svg image into `src/images` folder and put a empty value for **logo** field in in the `config.js` file.
+
+Time to test in local with `$ gatsby develop` and go to the browser to found:
+
+![new logo in web](doc-img/new-logo-web.png)
+
+Wow our logo is there, but... for my taste is very small and is too near to left side, we can adjust this with some css code inside `src/components/style.css` like this:
+
+```
+.navBarBrand img {
+    width: 50px;
+    margin-right: 10px;
+    margin-left: 30px;
+    display: inline-block;
+}
+```
+
+An the result is just perfect 😃
+
+![new logo web ok](doc-img/new-logo-web-ok.png)
+
 
 # The strange character in header
 
-
-
-
-
-
-
 # Font size and headers
 
-Put small the headers...
-
-
-
+Put small headers...
 
 # Menu size...
 
