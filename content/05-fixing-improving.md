@@ -31,7 +31,7 @@ So we move our images to `/content/doc-img/` folder and in our markdown we are g
 
 Now we should test in local so:
 
-```
+```bash
 $ gatsby develop
 ```
 
@@ -81,13 +81,13 @@ module.exports = config;
 
 We have add a `mv` command in build script but after a couple of executions we get this error:
 
-```
+```bash
 mv: rename public/static to docs/static: Directory not empty
 ```
 
 An easy one... we are moving things without remove the previous files so we get this error 😢, to solve this we just need to add a `rm` command before move, so in the `package.json`script section we change for this:
 
-``` json
+```json
   "scripts": {
     "build": "gatsby build --prefix-paths; rm -rf docs/*; mv public/* docs/"
   },
@@ -105,7 +105,7 @@ To see where the navbar is printed i just search for the literal `CONTENTS` (the
 
 If we see the code there is a `if else` for show or not the navbar:
 
-```
+```jsx
 if (finalNavItems && finalNavItems.length) {
         return (
           <Sidebar>
@@ -126,39 +126,41 @@ if (finalNavItems && finalNavItems.length) {
 
 Basically depend of the definition of variable `finalNavItems` so looking for the definition code we foud just before the last lines and the critical point is this `if` statement:
 
-```
-if ((item.node.fields.slug === location.pathname) || (config.gatsby.pathPrefix + item.node.fields.slug) === location.pathname) {
+```js
+	if ((item.node.fields.slug === location.pathname) || 
+		(config.gatsby.pathPrefix + item.node.fields.slug) === location.pathname) {
 ```
 
 Bascially is only setting a value to the variable if the actual `location.pathname` (is the page location) match one of the conditions, so to help us investigate i put this logs just before the `if` statement: 
 
-```
-console.log("Location: "+location.pathname);
-console.log("Slug: "+item.node.fields.slug); 
-console.log("Prefix + slug: "+config.gatsby.pathPrefix + item.node.fields.slug);
+```bash
+	console.log("Location: "+location.pathname);
+	console.log("Slug: "+item.node.fields.slug); 
+	console.log("Prefix + slug: "+config.gatsby.pathPrefix + item.node.fields.slug);
 ```
 
 While testing in local using `$ gatsby develop` we see in the console this traces:
 
-```
+```bash
 > Location: /02-setup-environment/
 > Slug: 02-setup-environment 
 > Prefix + slug: /gatsby-for-docs//02-setup-environment
 ```
+
 😮 here we have the problem, in local when the url finish in `/` this is not cover by the conditions, but is easy to fix, we just add a new condition to the if like this:
 
-```
-(item.node.fields.slug+'/' === location.pathname)
+```js
+	(item.node.fields.slug+'/' === location.pathname)
 ```
 
 One problem solved!, in the other side the problem in the published web is also obvious, if we see the last trace in the console there are an aditional slash in the url `/gatsby-for-docs//02-setup-environment` , this part of the path comes form `config.gatsby.pathPrefix` Ups 😗, thats something that we have setup in the `config.js` file, we have put:
 
-```
+```json
 	"gatsby": {
 		"pathPrefix": "/gatsby-for-docs/",
 		"siteUrl": "https://joolfe.github.io",
 		"gaTrackingId": null
-	},
+	}
 ```
 
 so just replacing with this `/gatsby-for-docs` weare done 😎.

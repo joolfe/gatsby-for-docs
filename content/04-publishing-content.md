@@ -8,7 +8,7 @@ metaDescription: "Publishing our tutorial content into github pages"
 
 Our live/production server is going to be Github, using the [GitHub Pages](https://pages.github.com/) feature, why? well..it is free, work great and is the easiest option, can we wish more? 😙.
 
-## Github set up
+# Github set up
 
 Before set up github need to create some folders and file sin our project, so:
    1. Create a `/docs` folder in our project root.
@@ -25,20 +25,20 @@ Without do anything else we have publish a static page, just check in the url th
 
 We are online!! 🎉🎉🎉
 
-## Creating content
+# Creating content
 
 Is time to start publishing our real content, one of the thing i loved from gitbook is how easy  is writte the docs in markdown, thats the reason why we are using [gatsby-gitbook-starter](https://www.gatsbyjs.org/starters/hasura/gatsby-gitbook-starter/) 😌.
 
 So having a quick look into the starter documentation we see that all markdown content should be place in the folder `/content` and already inside this folder we have some examples.
 
-```
+```bash
 $ ls
 codeblock.md	index.mdx	introduction.md
 ```
 
 We can remove it because we can have look in the git repo if we need to see something... and we already have some content to use (exactly what you are reading) so let us create some `.md` files, for example in the `01-introduction.md` file we will have:
 
-```
+```md
 ---
 title: "Introduction"
 metaTitle: "Tutorial introduction"
@@ -57,7 +57,7 @@ Welcome to the "gatsby-docs" tutorial, before start just let me explain the moti
 
 And we continue adding files until we have something like this inside the `content` folder: 
 
-```
+```bash
 $ ls
 index.mdx
 01-introduction.md
@@ -72,12 +72,13 @@ We have name our file starting with the number of the chapter so while we are ed
 
 Now we can test our content in local, so just execute:
 
-```
+```bash
 $ gatsby develop
 ```
- But this time when we go to `http://localhost:8000/` we see an error screen
 
- ![first errors](doc-img/first-errors.png)
+But this time when we go to `http://localhost:8000/` we see an error screen
+
+![first errors](doc-img/first-errors.png)
 
 Oh no 😓!!
 
@@ -85,17 +86,17 @@ Oh no 😓!!
 
 To do this open the `config.js` file that is on the root folder of our project, if you look for `sidebar` you will see this code:
 
-```
+```json
 "sidebar": {
   "forcedNavOrder": [
     "/introduction",
     "/codeblock"
-  ],
+  ]
 ```
 
 Here we are choosing the order of the files in our documentation left menu and `codeblock.md` file not exist anymore, so to solve this we can leave this property with an empty array `[]` because we are already ordering the files with a number of the chapter so no need to "force the navigation order", in our file we will put this code:
 
-```
+```json
 "sidebar": {
   "forcedNavOrder": [],
   ... // the file continue here
@@ -103,14 +104,15 @@ Here we are choosing the order of the files in our documentation left menu and `
 
 if we run again the command:
 
-```
+```bash
 $ gatsby develop
 ```
+
 It's working now!  👏👏👏 
 
 ![Run with content](doc-img/run-with.content.png)
 
-## Now publish our content
+# Now publish our content
 
 In local our static docs is working fine now is time to publish to the world 🌍!
 
@@ -118,20 +120,21 @@ Is going to be our firt deploy to `production` environment and while we have bee
 
 So let us try the command `$ npm run build` after a little more time than when we use the develop command we get:
 
-```
+```bash
 info Done building in 31.865 sec
 ```
+
 Great our static doc is ready for deployment.
 
 Should be as easy as `push`  ⬆️ content to the github but there are a consideration, gatsby by default generate the static sources in a folder called `/public` and we need to put everything inside our repo `/doc` folder. 
 
 To avoid do this manually all times we build our project let us add a command in the npm scripts, if you open the `package.json` file and look for the script field you will see:
 
-```
+```json
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build --prefix-paths"
-  },
+  }
 ```
 
 We are going to add inside the `build` script a command to move the content of public folder to the doc folder as this `mv public/* docs/`
@@ -140,7 +143,7 @@ We are going to add inside the `build` script a command to move the content of p
 
 So after build is going to copy everything into the doc folder, let us try  using again the command
 
-```
+```bash
 $ npm run build
 ```
 
@@ -148,7 +151,7 @@ This time when process is finish if we go to the `/doc` directory we can see our
 
 So time to publish in github we use:
 
-```
+```bash
 $ git add --all 
 $ git commit -m 'trying to publish'
 $ git push

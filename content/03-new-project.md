@@ -14,13 +14,13 @@ To create the new project again a terminal command is more than enougth, you jus
 
 We are going to use this:
 
-```
+```bash
 $ gatsby new gatsby-for-docs https://github.com/hasura/gatsby-gitbook-starter
 ```
 
 In no time we will found a new folder created with lot of things on it:
 
-```
+```bash
 $ cd gatsby-for-docs/
 $ ls
 Dockerfile		README.md		content			gatsby-config.js	node_modules		package.json
@@ -31,13 +31,13 @@ Basically this is a clone of the repo, and a great start for us.
 
 Before continue let us check that our new project is working, gatsby comes with a develop server for test purpose, to build our new site and run in local we execute :
 
-```
+```bash
 $ gatsby develop
 ```
 
 After some seconds in our terminal will appear:
 
-```
+```bash
 ...
 You can now view gatsby-gitbook-boilerplate in the browser.
 
@@ -74,13 +74,13 @@ After click the `Create Repository` button we will see the next instructions in 
 
 So we go to the terminal and inside our project folder we are going to first add the remote origin with this command 
 
-```
+```bash
 $ git remote add origin https://github.com/joolfe/gatsby-for-docs.git
 ```
 
 And then we sill do our first push
 
-```
+```bash
 $ git push -u origin master
 ```
 

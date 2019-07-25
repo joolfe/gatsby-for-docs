@@ -48,7 +48,7 @@ In this case if we use DevTools we see a strange css class called `css-1h18y8r` 
 
 Weel we cannot forget that we are using gatsby and react so this should be because the style is inside the component. Just having  alook to the `src/component` folder we see a `sidebar.js` file and in the code we can some css code:
 
-```
+```jsx
 const Sidebar = styled('aside')`
   width: 100%;
   /* background-color: rgb(245, 247, 249); */
@@ -85,7 +85,7 @@ The background is defined using a `background-color` but also there are gradient
 
 Better now, but still this purple color when the link is `active`, this is the code for this case:
 
-```
+```jsx
     ${props =>
       props.active &&
       `
@@ -116,6 +116,16 @@ I'm not going to repeat the steps here, we just look for css classes using devto
 
 All this color will be replaced by our wonderfull primary color `#FF4040`.
 
+Also for add a little contrast we are going to use our secondary color `#5BC3EB` in inline code blocks, actually has this look
+
+![inline code before](doc-img/inline-code-before.png)
+
+And after change the css in `sr/components/mdxComponents` (basically adding `color: #5BC3EB;`) we obtain this:
+
+![inline code after](doc-img/inline-code-after.png)
+
+Cool! 🤘
+
 # Image borders
 
 Some images in our tutorial don't looks pretty well, like for exmaple this one:
@@ -126,15 +136,15 @@ If you look carefully the github form is a picture but seems part of our text �
 
 We just do right click in a code block and inspect the css, the trick to do the border is very elegant, just use:
 
-```
-background-color: #f5f7f9;
-padding: 9.5px;
-border-radius: 4px;
+```css
+    background-color: #f5f7f9;
+    padding: 9.5px;
+    border-radius: 4px;
 ```
 
 So we can add into the `src/componenets/styles.css` file a new css rule to make all images that are inside the main body (we don't want to put a border to the logo for example 😗) have the border, this code should work:
 
-```{css}
+```css
 .mainWrapper img {
     background-color: #f5f7f9;
     padding: 9.5px;
@@ -152,7 +162,7 @@ Awesome! 💪
 
 Other piece that we can improve are the Qoute panel, I mean elements that appear when we use in markdown a quote like this:
 
-```{markdown}
+```md
 > Hi! this is a quote :-)
 ```
 
@@ -164,7 +174,7 @@ Too much discreet for my taste, so let us put some of color to this panel, I thi
 
 So we add this code into `src/componenets/styles.css` file:
 
-```{css}
+```css
 blockquote {
   padding: 20px;
   font-size: 14.5px;
@@ -193,7 +203,7 @@ I know, I know... I'm not a designer 😝 so this should work...
 
 If you remember while seting up the meta we see a **logo** property inside `config.js` file, concretely in header section that looks like:
 
-```
+```json
 	"header": {
 		"logo": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.sv",
 		"title": "Gatsby gitbook tutorial",
@@ -201,14 +211,14 @@ If you remember while seting up the meta we see a **logo** property inside `conf
 		"helpUrl": "",
 		"tweetText": "",
 		"links": [{ "text": "", "link": ""}],
-	},
+	}
 ```
 
 Ummm... but this logo is an outside resource... we want to use a logo in **svg** format and the resource will be inside our files 😕.
 
 Let's have a look to the code that print the logo (remeber using DevTool...), we get this:
 
-```{html}
+```html
 <a aria-current="page" class="navbar-brand navBarBrand" href="/gatsby-for-docs/">
     <img class="img-responsive" src="https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.svg" alt="logo">
     Gatsby gitbook tutorial
@@ -219,7 +229,7 @@ So we search in our files for the css class `navbar-brand navBarBrand`, we easil
 
 The code that print the logo is this one:
 
-```
+```jsx
     <Link to="/" className={'navbar-brand navBarBrand'}>
     {logo !== '' ?
         (<img className={'img-responsive'} src={logo} alt={'logo'} />)
@@ -240,7 +250,7 @@ Time to test in local with `$ gatsby develop` and go to the browser to found:
 
 Wow our logo is there, but... for my taste is very small and is too near to left side, we can adjust this with some css code inside `src/components/style.css` like this:
 
-```
+```css
 .navBarBrand img {
     width: 50px;
     margin-right: 10px;
@@ -254,15 +264,6 @@ An the result is just perfect 😃
 ![new logo web ok](doc-img/new-logo-web-ok.png)
 
 
-# The strange character in header
-
-# Font size and headers
-
-Put small headers...
-
-# Menu size...
-
-Esta bailando todo el rato.
 
 
 

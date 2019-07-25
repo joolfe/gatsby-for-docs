@@ -74,7 +74,6 @@ const Header = ({location}) => (
                     (<li><a href={helpUrl}>Need Help?</a></li>) : null
                   }
                 </ul>
-              }
               <ul className={'nav navbar-nav navBarUL navbar-right'}>
                 {tweetText !== '' ? 
                   (<li>

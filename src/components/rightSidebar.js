@@ -14,7 +14,6 @@ const Sidebar = styled('aside')`
   height: 100vh;
   overflow: auto;
   position: fixed;
-  padding-left: 24px;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: sticky;
@@ -87,13 +86,12 @@ const SidebarLayout = ({ location }) => (
           let innerItems;
           if(item !== undefined) {
             if ((item.node.fields.slug === location.pathname) || (item.node.fields.slug+'/' === location.pathname) || (config.gatsby.pathPrefix + item.node.fields.slug) === location.pathname) {
-              console.log("SIP");
               if (item.node.tableOfContents.items) {
                 innerItems = item.node.tableOfContents.items.map((innerItem, index) => {
                   return (
                     <ListItem
                       key={index}
-                      to={`#${innerItem.title}`}
+                      to={`#${innerItem.title.replace(/\s+/g,"_")}`}
                       level={1}
                     >
                       {innerItem.title}

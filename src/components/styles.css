@@ -477,6 +477,11 @@ img {
   padding: 10px 15px;
 }
 @media (max-width: 767px) {
+  .navBarBrand img {
+    margin-left: 0px;
+    width: 40px;
+  }
+  
   hr {
     margin-top: 0;
     margin-bottom: 0;
@@ -502,12 +507,12 @@ img {
   }
 
   .navBarToggle {
-    margin-top: 15px;
+    margin-right: 0px;
   }
 
   .navBarBrand {
     font-size: 20px;
-    padding: 15px
+    padding-top: 5px;
   }
 
   .titleWrapper {

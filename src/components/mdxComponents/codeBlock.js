@@ -1,6 +1,6 @@
 import * as React from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import prismTheme from "prism-react-renderer/themes/vsDark";
+import prismTheme from "prism-react-renderer/themes/oceanicNext";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import '../styles.css';
 
@@ -30,11 +30,13 @@ const CodeBlock = ({ children: exampleCode, ...props }) => {
       </LiveProvider>
     );
   } else {
+   
+    const language = props["className"] ? props["className"].replace(/language-/, '') : "javascript";
     return (
       <Highlight
         {...defaultProps}
         code={exampleCode}
-        language="javascript"
+        language={language}
         theme={prismTheme}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
