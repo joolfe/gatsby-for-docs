@@ -12,6 +12,8 @@ I was thinking in test gatsby to see if i can use in my daily work so i do what 
 
 And after this i thought, why i don't publish the tutorial? maybe is usefull for others... and here is where you are, all what you are seeing in this moment is the result of this tutorial, i mean this page 😊.
 
+<br/>
+
 # Discharge of responsibility
 
 You maybe see that this tutorial is a bit 'informal' 👻, the used language, the expresions, the explanations, errors in the code... 

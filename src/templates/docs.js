@@ -34,7 +34,7 @@ injectGlobal`
       "Segoe UI Emoji",
       "Segoe UI Symbol";
 
-    font-size: 16px;
+    font-size: 15px;
   }
 
   a {

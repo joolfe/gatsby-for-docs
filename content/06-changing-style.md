@@ -22,6 +22,8 @@ We start in the first column putting our coral `#FF4040` and "locking" the color
 
 > This is the link of [our final palette](https://coolors.co/ff4040-eeeeee-dadad9-36382e-5bc3eb) as colors are in the url you can share or save very quickly  🌈
 
+<br/>
+
 # Changing primary color
 
 Our primary color then is going to be the coral `#FF4040`, so our header must be thata color.
@@ -39,6 +41,8 @@ Gatsby develop server comes with "hot reload" so change sin css files will be up
 ![header color change](doc-img/header-color-change.png)
 
 Cool!
+
+<br/>
 
 # Left menu color
 
@@ -104,6 +108,8 @@ Pretty isn't it? But wait! when we put the cursor on top of the menu options the
 
 How much beauty 😢.
 
+<br/>
+
 # Rest of the colors...
 
 We have change most visible color elements but there are other elements that still has the purple color,
@@ -125,6 +131,8 @@ And after change the css in `sr/components/mdxComponents` (basically adding `col
 ![inline code after](doc-img/inline-code-after.png)
 
 Cool! 🤘
+
+<br/>
 
 # Image borders
 
@@ -157,6 +165,7 @@ If we refresh in local we will see this:
 
 Awesome! 💪
 
+<br/>
 
 # Quote panels
 
@@ -192,6 +201,7 @@ If we test in local we can see this
 
 ![img](doc-img/quote-after-changes.png)
 
+<br/>
 
 # Logo
 

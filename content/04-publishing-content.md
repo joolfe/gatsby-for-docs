@@ -8,6 +8,8 @@ metaDescription: "Publishing our tutorial content into github pages"
 
 Our live/production server is going to be Github, using the [GitHub Pages](https://pages.github.com/) feature, why? well..it is free, work great and is the easiest option, can we wish more? 😙.
 
+<br/>
+
 # Github set up
 
 Before set up github need to create some folders and file sin our project, so:
@@ -24,6 +26,8 @@ Without do anything else we have publish a static page, just check in the url th
 ![First publication in github](doc-img/first-publish.png)
 
 We are online!! 🎉🎉🎉
+
+<br/>
 
 # Creating content
 
@@ -44,6 +48,8 @@ title: "Introduction"
 metaTitle: "Tutorial introduction"
 metaDescription: "Why i have writte this tutorial?"
 ---
+
+<br/>
 
 # Introduction
 
@@ -111,6 +117,8 @@ $ gatsby develop
 It's working now!  👏👏👏 
 
 ![Run with content](doc-img/run-with.content.png)
+
+<br/>
 
 # Now publish our content
 

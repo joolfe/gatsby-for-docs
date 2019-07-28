@@ -15,6 +15,8 @@ After a ligth reading in the [documentation](https://www.gatsbyjs.org/docs/how-g
 
 So just go to the file `config.js` and update the property with value `gatsby-for-docs`, build again, publish and done 💪.
 
+<br/>
+
 # Images
 
 Other problem that we can see at a glance is that images are not being loaded in our tutorial 😞
@@ -38,6 +40,8 @@ $ gatsby develop
 and when we go to `http://http://localhost:8000` we can confirm that images are being loaded, awesome!!
 
 Now just build, push and done 👌!
+
+<br/>
 
 # Complete the metainformation
 
@@ -94,6 +98,8 @@ An easy one... we are moving things without remove the previous files so we get 
 ```
 
 Thats all folks 🐷!
+
+<br/>
 
 # Right nav bar erratic behaviour 
 
@@ -167,6 +173,7 @@ so just replacing with this `/gatsby-for-docs` weare done 😎.
 
 > Don't forget to remove the `console.log` code before publish again 😉.
 
+<br/>
 
 # Google analytics 
 

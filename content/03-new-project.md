@@ -60,6 +60,8 @@ That's what i have found, Great! 🚀
 
 ![First gatsby run](doc-img/first-run.png)
 
+<br/>
+
 # Setup Git repo
 
 We have our new project running and we donñt want to lose our work... I know, I know we have just execute a couple of commands 😗but we have create a new project and don´t want to loose so let us setup our github repo.
@@ -68,7 +70,7 @@ We already has an account on github offrcourse so let us login into github and c
 
 ![Create repo on github](doc-img/create-repo.png)
 
-After click the `Create Repository` button we will see the next instructions in the screen that is showed
+After click the **"Create Repository"** button we will see the next instructions in the screen that is showed
 
 ![New repo](./doc-img/new-repo.png)
 

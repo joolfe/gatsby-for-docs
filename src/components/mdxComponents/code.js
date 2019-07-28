@@ -6,7 +6,7 @@ const Code = styled('code')`
   border-radius: 4px;
   color: #5BC3EB;
   padding: 2px 6px;
-  font-size: 0.9375em;
+  font-size: 14px;
 `;
 
 export default Code;

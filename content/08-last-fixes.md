@@ -21,6 +21,8 @@ If we review the original github template (or starter) in the demo we can also s
 
 So is nothing related with our changes 😜, we probabily can do a merge request to fix this in the original repo but this is not part of this tutorial...
 
+<br/>
+
 # Right menu navigation
 
 If try to use **right side menu bar** links to navigate inside a page, we notice that don't work 😰, for example testing in local in our page `http://localhost:8000/05-fixing-improving` when click on the **Google analytics** link we can see that url changes for `http://localhost:8000/05-fixing-improving#Google%20analytics` but the scroll don't change... Is easy to imaging that spaces translated to HTML as `%20` are the problem.
@@ -35,6 +37,8 @@ We need to change in two places:
 For both we are going to use the method `.replace(/\s+/g,"_")` to replace spaces for underscores.
 
 Again this error is not related with our changes, maybe another merge request here?
+
+<br/>
 
 # Menu size
 
@@ -80,6 +84,8 @@ const Layout = ({ children, location }) => (
 ```
 
 And we can find above in this file the definition of `LeftSideBarWidth`, `Content` and `RightSideBarWidth` here is where we need to put our css and our layout will work like a charm! ✨
+
+<br/>
 
 # Code blocks
 
