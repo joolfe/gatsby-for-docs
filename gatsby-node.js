@@ -4,6 +4,16 @@ const startCase = require("lodash.startcase");
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
+  
+  const { createRedirect } = actions
+  
+  createRedirect({
+    fromPath: `/`,
+    isPermanent: true,
+    redirectInBrowser: true,
+    toPath: `/01-introduction`,
+  })
+
   return new Promise((resolve, reject) => {
     resolve(
       graphql(
@@ -35,6 +45,8 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
+          console.log("AQUI"+ node.fields.slug);
+          console.log(node);
           createPage({
             path: node.fields.slug ? node.fields.slug : "/",
             component: path.resolve("./src/templates/docs.js"),
