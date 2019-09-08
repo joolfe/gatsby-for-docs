@@ -31,15 +31,9 @@ After some minutes searching in google we get an example from the [gatsby github
   createRedirect({
     fromPath: `/`,
     isPermanent: true,
-    redirectInBrowser: true,
+    redirectInBrowser: false,
     toPath: `/01-introduction`,
   })
 ```
 
 To test we just execute `$ gatsby develop` and we can test in localhost that everything is working as expected, nice 💪!!
-
-
-# Removing the index.mdx file
-
-If we try to remove the `index.mdx` file, even with the redirection activated, we get an erro when navigate to root path, it´s seems like Gatsby expect at least one page in the content folder, 
-
