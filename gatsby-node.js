@@ -52,7 +52,6 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
-          console.log("AQUI "+node.fields.slug);
           createPage({
             path: node.fields.slug,
             component: path.resolve("./src/templates/docs.js"),

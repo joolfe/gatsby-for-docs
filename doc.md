@@ -1,13 +1,9 @@
 TODO
-- H1 meterle mas espaciado arriba para que este mas separadito no_
-- Hacer index que es ultima pagina y tuto.
-  - Poner en la pagina principal tecnologias que usamos no?
+====
+- Add in the readme how to deploy new verison for me.
+- Pasarle lo de google de optimizar a ver que tal?
 - Lo del gpdr y cookies hay tengo que verlo.
-- aniadir negritas y quitar algunos embebidos please.
-- Add quien soy en algun sitio.
-- Review the metainfo in all the pages to put consistently.
+- Aniadir negritas y quitar algunos embebidos please.
+- Hacer un releido global.
 - Review all the language using gramarly.
-- Put in the reamde file a text about what is the repo, where is the tutorial published
-- Create a little md about how to dpeloy and do thing for myself...
-
 
