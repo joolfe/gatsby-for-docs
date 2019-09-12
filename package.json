@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-gitbook-boilerplate",
+  "name": "gatsby-gitbook",
   "private": true,
   "description": "Documentation, built with mdx",
-  "author": "Praveen <praveen@hasura.io> (@praveenweb)",
+  "author": "Jorge Oliva",
   "version": "0.0.1",
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.0.0",
@@ -46,7 +46,7 @@
   "main": "n/a",
   "scripts": {
     "start": "gatsby develop",
-    "build": "gatsby build --prefix-paths; rm -rf docs/*; mv public/* docs/"
+    "build": "gatsby clean; gatsby build --prefix-paths; rm -rf docs/*; mv public/* docs/"
   },
   "devDependencies": {
     "gatsby-plugin-remove-trailing-slashes": "^2.0.11",

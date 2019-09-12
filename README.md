@@ -6,7 +6,15 @@ Visit the tutorial on https://joolfe.github.io/gatsby-for-docs/, you will see th
 
 ## ☁️ Deploy
 
+This web tutorial is hosted in Github pages so the steps to be deployed are:
 
+```
+$ npm run build
+```
+
+This command will clean the gatsby cache, generate all the static sources and move content to `/docs` folder.
+
+Now just push all changes to git repo, after some time will be automatically published in github pages.
 
 
 
