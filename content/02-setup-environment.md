@@ -1,7 +1,7 @@
 ---
-title: "Set up environment"
+title: "Set up the environment"
 metaTitle: "Set up the environment"
-metaDescription: "Steps for set up the environment for use gatsby"
+metaDescription: "Steps for setting up the environment for use gatsby"
 ---
 
 # Before start
@@ -11,15 +11,14 @@ First of all we assume that you already have installed:
 - [npm](https://www.npmjs.com/get-npm)
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-If not there are thousand of tutorial outthere for this 😉.
+If not there are thousands of tutorial out there for this 😉.
 
-> You don't rememeber if you already installed this tools? ok just go to terminal and execute `npm -v` , `node -v` and `git --version` you will see the versions if are already installed.
+> You don't remember if you already installed these tools? ok just go to terminal and execute `npm -v` , `node -v` and `git --version` you will see the versions if are already installed.
 
-<br/>
 
 # Install Gatsby
 
-First we need to install gatsby cli, and cannot be more easy that just execute in temrinal:
+First, we need to install gatsby cli, and cannot be easier than just execute in terminal:
 
 ```bash
 $ npm install -g gatsby-cli
